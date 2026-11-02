@@ -1,0 +1,32 @@
+{
+  "id": "exemple-reseaux",
+  "title": "Exemple – Bases des réseaux",
+  "description": "Cours de démonstration (8 QCM, 5 cartes)",
+  "summary": [
+    { "title": "Modèle en couches", "points": [
+      "Le modèle **OSI** comporte 7 couches ; le modèle **TCP/IP** en comporte 4.",
+      "Couche **transport** : TCP (fiable, connecté) et UDP (rapide, sans garantie).",
+      "Couche **réseau** : adressage et routage avec IP." ] },
+    { "title": "Adressage", "points": [
+      "Une adresse **IPv4** fait 32 bits (4 octets) ; **IPv6** fait 128 bits.",
+      "Le **DNS** traduit un nom de domaine en adresse IP.",
+      "Le masque `/24` correspond à 255.255.255.0." ] }
+  ],
+  "flashcards": [
+    { "q": "Taille d'une adresse IPv4 ?", "a": "32 bits (4 octets)", "chapter": "Adressage" },
+    { "q": "Taille d'une adresse IPv6 ?", "a": "128 bits", "chapter": "Adressage" },
+    { "q": "Rôle du DNS ?", "a": "Traduire un nom de domaine en adresse IP", "chapter": "Adressage" },
+    { "q": "Différence TCP / UDP ?", "a": "TCP : fiable, orienté connexion. UDP : sans connexion, plus rapide, sans garantie de livraison.", "chapter": "Modèle en couches" },
+    { "q": "Combien de couches dans le modèle OSI ?", "a": "7", "chapter": "Modèle en couches" }
+  ],
+  "questions": [
+    { "chapter": "Modèle en couches", "question": "Combien de couches compte le modèle OSI ?", "choices": ["4", "5", "7", "9"], "answer": [2], "explanation": "OSI = 7 couches (physique, liaison, réseau, transport, session, présentation, application). TCP/IP en a 4." },
+    { "chapter": "Modèle en couches", "question": "Quel protocole de transport garantit la livraison des données ?", "choices": ["UDP", "TCP", "ICMP", "ARP"], "answer": [1], "explanation": "TCP établit une connexion et retransmet les paquets perdus." },
+    { "chapter": "Modèle en couches", "question": "Lesquels sont des protocoles de la couche transport ?", "choices": ["TCP", "UDP", "IP", "HTTP"], "answer": [0, 1], "explanation": "IP est de niveau réseau, HTTP de niveau application." },
+    { "chapter": "Adressage", "question": "Combien de bits fait une adresse IPv4 ?", "choices": ["16", "32", "64", "128"], "answer": [1], "explanation": "4 octets de 8 bits = 32 bits." },
+    { "chapter": "Adressage", "question": "Quel est le rôle du DNS ?", "choices": ["Chiffrer les échanges", "Attribuer des adresses IP automatiquement", "Traduire un nom de domaine en adresse IP", "Router les paquets"], "answer": [2], "explanation": "L'attribution automatique d'IP, c'est DHCP." },
+    { "chapter": "Adressage", "question": "Le masque 255.255.255.0 s'écrit aussi :", "choices": ["/8", "/16", "/24", "/32"], "answer": [2], "explanation": "24 bits à 1 → /24." },
+    { "chapter": "Adressage", "question": "Quelles affirmations sur IPv6 sont vraies ?", "choices": ["Adresses de 128 bits", "Adresses de 64 bits", "Conçu pour pallier l'épuisement d'IPv4", "Compatible sans conversion avec IPv4"], "answer": [0, 2], "explanation": "IPv6 n'est pas directement compatible avec IPv4 (il faut double pile ou traduction)." },
+    { "chapter": "Modèle en couches", "question": "Quel protocole sert au routage des paquets entre réseaux ?", "choices": ["IP", "TCP", "DNS", "SMTP"], "answer": [0], "explanation": "IP assure l'adressage et le routage (couche réseau)." }
+  ]
+}
